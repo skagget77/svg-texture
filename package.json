@@ -11,6 +11,10 @@
     },
     "author": "Johan Andersson <skagget77@gmail.com>",
     "license": "MIT",
+    "repository": {
+	"type" : "git",
+	"url" : "https://github.com/skagget77/svg-render.git"
+    },
     "dependencies": {
 	"sax": "^1.2.4"
     },
