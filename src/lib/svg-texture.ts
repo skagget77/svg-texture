@@ -1,3 +1,9 @@
+/*!
+ * svg-texture
+ * Copyright (c) 2018 Johan Andersson <skagget77@gmail.com>
+ * MIT License
+ */
+
 import { SAXParser } from 'sax'
 
 /**

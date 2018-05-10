@@ -1,9 +1,19 @@
 {
-    "compilerOptions": {	
-	"allowJs": true,
-	"module": "es6",
+    "compilerOptions": {
+	"declaration": true,
+	"module": "commonjs",
 	"noImplicitAny": true,
-	"outDir": "./dist/",
-	"target": "es5"
-    }
+	"outDir": "dist",
+	"removeComments": true,
+	"rootDir": "src",
+	"sourceMap": true,
+	"target": "es6"
+    },
+    "files": [
+	"src/lib/svg-texture.ts",
+	"src/test/svg-texture.ts"
+    ],
+    "exclude": [
+	"node_modules"
+    ]
 }

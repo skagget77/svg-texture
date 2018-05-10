@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 
 // SUT.
-import { Style, TexturePainter, renderTexture } from '../src/index';
+import { Style, TexturePainter, renderTexture } from '../lib/svg-texture';
 
 // SVG test document.
 const svgDoc = `
