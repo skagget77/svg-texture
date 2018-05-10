@@ -1,28 +1,29 @@
 {
-  "name": "svg-texture",
-  "version": "0.0.1",
-  "description": "Create textures from SVG images",
-  "main": "dist/lib/svg-texture.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "mocha --ui tdd dist/test/svg-texture.js --reporter spec"
-  },
-  "author": "Johan Andersson <skagget77@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/skagget77/svg-render.git"
-  },
-  "dependencies": {
-    "sax": "^1.2.4"
-  },
-  "devDependencies": {
-    "@types/chai": "^4.1.3",
-    "@types/mocha": "^5.2.0",
-    "@types/node": "^6.0.109",
-    "@types/sax": "^1.0.0",
-    "chai": "^4.1.2",
-    "mocha": "^5.1.1",
-    "typescript": "^2.8.3"
-  }
+    "name": "svg-texture",
+    "version": "0.0.1",
+    "description": "Create textures from SVG images",
+    "main": "dist/lib/svg-texture.js",
+    "types": "dist/lib/svg-texture.d.ts",
+    "scripts": {
+	"build": "tsc",
+	"test": "mocha --ui tdd dist/test/svg-texture.js --reporter spec"
+    },
+    "author": "Johan Andersson <skagget77@gmail.com>",
+    "license": "MIT",
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/skagget77/svg-render.git"
+    },
+    "dependencies": {
+	"sax": "^1.2.4"
+    },
+    "devDependencies": {
+	"@types/chai": "^4.1.3",
+	"@types/mocha": "^5.2.0",
+	"@types/node": "^6.0.109",
+	"@types/sax": "^1.0.0",
+	"chai": "^4.1.2",
+	"mocha": "^5.1.1",
+	"typescript": "^2.8.3"
+    }
 }
