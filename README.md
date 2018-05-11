@@ -2,37 +2,38 @@
 Create textures from SVG images in a framework agnostic way.
 
 ## Example
-The example below uses Typescript and Phaser (https://phaser.io).
+The example below uses Typescript and Phaser 3 (https://phaser.io).
 ```Typescript
-import { Graphics } from 'phaser';
-import { TexturePainter, renderTexture } from 'svg-texture';
+import * as Phaser from 'phaser';
+import { Style, TexturePainter, renderTexture } from 'svg-texture';
 
 // Phaser specific TexturePainter implementation.
 class PhaserPainter implements TexturePainter {
-    private g: Graphics;
+    private g: Phaser.GameObjects.Graphics;
 
-    constructor(g: Graphics) {
-        this.g = g;
+    constructor(g: Phaser.GameObjects.Graphics) {
+	this.g = g;
     }
 
     circle(x: number, y: number, r: number, style: Style) {
-        g.lineColor = style.rgb
+	let c = Phaser.Display.Color.HexStringToColor(style.rgb).color;
 
-        if (style.fill) {
-            g.beginFill(style.rgb);
-            g.drawCircle(x, y, r);
-            g.endFill();
-        }
-        else {
-            g.drawCircle(x, y, r);
-        }
+	if (style.fill) {
+	    this.g.fillStyle(c);
+	    this.g.fillCircle(x, y, r);
+	}
+	else {
+	    this.g.lineStyle(1, c);
+	    this.g.strokeCircle(x, y, r);
+	}
     }
 }
 
-// Render SVG document onto a Phaser texture scaling it up to 200%.
-let g = new Graphics(game, 0, 0);
-renderTexture(new PhaserPainter(g), svgDoc, 2.0);
-let texture = g.generateTexture();
+function create() {
+    // Render SVG document onto a Phaser 3 texture scaling it up to 200%.
+    let scene = game.scene.add("main", {}, true);
+    renderTexture(new PhaserPainter(scene.add.graphics()), svgDoc, 2.0);
+}
 ```
 
 # Limitations
