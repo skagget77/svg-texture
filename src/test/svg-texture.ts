@@ -46,10 +46,10 @@ suite('toTexture', () => {
 
 	renderTexture(p, svgDoc, 2.0);
 
-	assert.equal(p.text[0], 'circle(254.311, 258.24, 507.512, true, 365980)');
-	assert.equal(p.text[1], 'circle(254.311, 258.24, 420.472, true, 77ACDE)');
-	assert.equal(p.text[2], 'circle(254.311, 258.24, 312.642, true, F0D933)');
-	assert.equal(p.text[3], 'circle(254.311, 258.24, 195.544, true, D05C4F)');
-	assert.equal(p.text[4], 'circle(254.311, 258.24, 54.136, true, ECE5D5)');
+	assert.equal(p.text[0], 'circle(508.622, 516.48, 507.512, true, 365980)');
+	assert.equal(p.text[1], 'circle(508.622, 516.48, 420.472, true, 77ACDE)');
+	assert.equal(p.text[2], 'circle(508.622, 516.48, 312.642, true, F0D933)');
+	assert.equal(p.text[3], 'circle(508.622, 516.48, 195.544, true, D05C4F)');
+	assert.equal(p.text[4], 'circle(508.622, 516.48, 54.136, true, ECE5D5)');
     });
 });

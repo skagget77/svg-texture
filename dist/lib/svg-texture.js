@@ -24,7 +24,10 @@ class Circle {
         this.style = style;
     }
     render(painter, scale) {
-        painter.circle(this.x, this.y, this.r * scale, this.style);
+        const x = this.x * scale;
+        const y = this.y * scale;
+        const r = this.r * scale;
+        painter.circle(x, y, r, this.style);
     }
 }
 function renderTexture(painter, svg, scale = 1) {

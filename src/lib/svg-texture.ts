@@ -97,7 +97,11 @@ class Circle implements Shape {
 
     // Documented in base interface.
     render(painter: TexturePainter, scale: number) {
-	painter.circle(this.x, this.y, this.r * scale, this.style);
+	const x = this.x * scale;
+	const y = this.y * scale;
+	const r = this.r * scale;
+
+	painter.circle(x, y, r, this.style);
     }
 }
 
